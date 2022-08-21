@@ -1,0 +1,33 @@
+using System;
+
+namespace operators
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            int a = 1;
+            int b = 2;
+            int c = a + b;
+            int d = 0;
+
+            Console.WriteLine(c);
+
+            string s = "string s";
+
+            if(a < b)
+            {
+                Console.WriteLine(s);
+            }
+            else
+            {
+                Console.WriteLine(b-a);
+            }
+
+            int x = ++d;
+
+            Console.WriteLine(x);
+            
+        }
+    }
+}

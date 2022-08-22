@@ -1,0 +1,46 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("*** Implicit Conversion ***");
+        sbyte sb = 1;
+        byte x = 2;
+        short y = 3;
+        int z = sb + x + y;
+
+        Console.WriteLine("int z: " + z);
+
+        Console.WriteLine("*** Explicit Conversion ***");
+
+        int i = 1;
+
+        byte b = (byte)i;
+
+        Console.WriteLine("b: " + b);
+
+        string why = i.ToString();
+
+        Console.WriteLine("String why is: " + i);
+
+        Console.WriteLine("*** System Convert Class ***");
+
+        string s1 = "10";
+        string s2 = "20";
+        int n1, n2;
+        int sum;
+
+        n1 = Convert.ToInt32(s1);
+        n2 = Convert.ToInt32(s2);
+        sum = n1+n2;
+
+        Console.WriteLine("Sum: " + sum);
+        
+        Console.WriteLine("*** Parse Method ***");
+        int sumsum = Int32.Parse(s1);
+
+        Console.WriteLine("Sumsum(Which gotta be 10) is: " + sumsum);
+
+
+
+    }
+}

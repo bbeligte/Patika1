@@ -1,0 +1,39 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        try
+        {
+            Console.WriteLine("Toplanacak ilk sayıyı giriniz: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Toplanacak ikinci sayıyı giriniz: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = a+b;
+            Console.WriteLine("Toplam: " + c);
+        }
+        catch (FormatException ex)
+        {
+            Console.WriteLine("Sayısal değer taşımayan karakterleri toplayamıyorum: " + ex.Message.ToString());
+        }
+
+        catch (OverflowException ex)
+        {
+            Console.WriteLine("Bu kadar büyük sayılarla işlem yapamıyoruz: " + ex.Message);
+        }
+
+        catch(ArgumentNullException ex)
+        {
+            Console.WriteLine("Toplayacak sayılarınız yoksa sistemi meşgul etmeyin lütfen: " + ex.Message.ToString());
+        }
+
+        catch(Exception ex)
+        {
+            Console.WriteLine("Kendimi iyi hissetmiyorum: " + ex.Message.ToString());
+        }
+
+        finally
+        {
+            Console.WriteLine("Bugün de dükkanı 2000'ler yazılımcısı mizahıyla kapattık.");
+        }
+    }
+}

@@ -1,0 +1,27 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int x;
+        string result;
+
+        try
+        {
+            Console.WriteLine("Bir sayı giriniz:");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            result = x%2 == 0 ? "Çift bir sayı olan " + x + " girdiniz" : "Tek sayı olan " + x + " girdiniz.";
+
+            Console.WriteLine(result);
+        }
+        catch (ArgumentNullException)
+        {
+            Console.WriteLine("Lütfen bir sayı giriniz.");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Bir sayı girmenizi istemiştim.");
+        }  
+            
+    }
+}

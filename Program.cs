@@ -1,39 +1,54 @@
-﻿using System;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        string s = "Patika";
-        char c = 'c';
+        Console.WriteLine("Zaman konumu sorgu terminaline hoşgeldiniz!");
 
-        uint ui = 10;
-        int i = 12;
-        Int32 i32 = 32;
-        Int16 i16 = 16;
-        Int64 i64 = 64;
+        int month = DateTime.Now.Month;
 
-        long l = 1;
-        ulong ul = 2;
-
-        object o1 = "Hello";
-
-        bool write = true;
-
-        string date = DateTime.Now.ToString("mm.dd.yyyy");
-        Console.WriteLine(date);
-
-        string hour = DateTime.Now.ToString("hh:mm");
-        Console.WriteLine(hour);
-
-        if(write == true)
+        switch (month)
         {
-            Console.WriteLine(o1 + " " + s);
+            case 4:
+                Console.WriteLine("Nisan ayındasınız.");
+                break;
+            case 6:
+                Console.WriteLine("Haziran ayındasınız.");
+                break;
+            case 8:
+                Console.WriteLine("Ağustos ayındasınız.");
+                break;
+
+            default:
+                Console.WriteLine("Böyle bir ay yok. Lütfen olağanın dışına çıkmayın. En kısa sürede bir yetkili size ulaşacaktır, olduğunuz yeri terk etmeyin. *Bilinmeyen bir zamanda bulunduğunuz için tahmini varış süresi veremiyoruz.");               
+                break;
         }
 
-        else
+        switch (month)
         {
-            return;
+            case 12:
+            case 1:
+            case 2:
+                Console.WriteLine("Kış mevsimindesiniz.");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                Console.WriteLine("İlkbahar mevsimindesiniz.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                Console.WriteLine("Yaz mevsimindesiniz.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                Console.WriteLine("Sonbahar mevsimindesiniz.");
+                break;
+
+            default:
+                Console.WriteLine("Bilinmeyen bir mevsimdesiniz. Lütfen en yakınınızdaki yetkiliye müraacat ederek normale dönüşünüzü sağlayın.");
+                break;
         }
     }
 }

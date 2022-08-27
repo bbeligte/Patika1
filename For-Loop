@@ -1,0 +1,32 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int oddSum = 0;
+        int evenSum = 0;
+
+        for(int i = 0; i <= 1000; i++)
+        {
+            if(i%2 == 1)
+            {
+                oddSum += i;
+            }
+
+            else
+            {
+                evenSum += i;
+            }            
+        }
+
+        Console.WriteLine("oddSum: " + oddSum);
+        Console.WriteLine("evenSum: " + evenSum);   
+
+        for(int x = 0; x < 10; x++)
+        {
+            if(x == 1)
+                continue;
+
+            Console.WriteLine(x);
+        } 
+    }    
+}

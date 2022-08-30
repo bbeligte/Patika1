@@ -1,0 +1,23 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Array uzunluğunu giriniz: ");
+        int arrayLength = int.Parse(Console.ReadLine());
+        int[] sayilar = new int[arrayLength];
+
+        for (int i = 0; i < arrayLength; i++)
+        {
+            Console.Write("Lütfen {0}. sayıyı giriniz: ", i+1);
+            sayilar[i] = int.Parse(Console.ReadLine());           
+        }
+
+        int sum = 0;
+        foreach (var item in sayilar)
+        {
+            sum += item;
+        }
+
+        Console.WriteLine("Array ortalaması: " + sum/sayilar.Length);
+    }
+}

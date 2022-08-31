@@ -1,0 +1,33 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        List<int> candls = new List<int>();
+        candls.Add(1);
+        candls.Add(3);
+        candls.Add(5);
+        candls.Add(5);
+
+        Console.Write(birthdayCakeCandles(candls));
+
+        //list.Reverse, dizini tersten yazmak için kullanılır:
+        //candls.Reverse(); komutu "5531" sonucunu verecektir.
+    }
+
+    public static int birthdayCakeCandles(List<int> candles)
+    {
+        candles.Sort();
+        int hMany = 0;
+        int c = candles.Last();       
+        foreach(var candle in candles)
+        {
+            if(candle > c)
+                c = candle;
+            else if(candle == c)
+                hMany++;
+        }
+        
+        return hMany;
+    }
+
+}

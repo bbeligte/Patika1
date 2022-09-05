@@ -1,0 +1,70 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Ops operations = new Ops();
+
+        Console.Write("Toplama için 1'e, Çıkarma için 2, Çarpma için 3, Bölme için 4'e basın: ");
+
+        int islem = int.Parse(Console.ReadLine());
+
+        int x;
+        int y;
+
+        switch (islem)
+        {
+            case 1:
+                Console.WriteLine("Toplama işlemini seçtiniz. Lütfen toplanacak iki sayı girin:");
+                x = int.Parse(Console.ReadLine());
+                y = int.Parse(Console.ReadLine());
+                Console.WriteLine(operations.Sum(x,y));
+                break;
+
+            case 2:
+                Console.WriteLine("Çıkarma işlemini seçtiniz. Lütfen çıkartılacak iki sayı girin:");
+                x = int.Parse(Console.ReadLine());
+                y = int.Parse(Console.ReadLine());
+                Console.WriteLine(operations.Deduct(x,y));
+                break;
+            
+            case 3:
+                Console.WriteLine("Çarpma işlemini seçtiniz. Lütfen çarpılacak iki sayı girin:");
+                x = int.Parse(Console.ReadLine());
+                y = int.Parse(Console.ReadLine());
+                Console.WriteLine(operations.Multiply(x,y));
+                break;
+            
+            case 4:
+                Console.WriteLine("Bölme işlemini seçtiniz. Lütfen bölünecek iki sayı girin:");
+                x = int.Parse(Console.ReadLine());
+                y = int.Parse(Console.ReadLine());
+                Console.WriteLine(operations.Divide(x,y));
+                break;           
+        }
+    }
+}
+
+#region Operations
+class Ops
+{
+    public int Sum(int n1, int n2)
+    {
+        return (n1 + n2);
+    }
+
+    public int Deduct(int n1, int n2)
+    {
+        return (n1 - n2);
+    }
+
+    public int Multiply(int n1, int n2)
+    {
+        return (n1 * n2);
+    }
+
+    public int Divide(int n1, int n2)
+    {
+        return (n1 / n2);
+    }
+}
+#endregion

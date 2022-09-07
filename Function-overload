@@ -1,0 +1,26 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int x = 1;
+        string s = "Merhaba dünya";
+
+        funcs func = new funcs();
+
+        func.EkranaYazdir(x);
+        func.EkranaYazdir(s);
+    }
+}
+
+class funcs
+{
+    public void EkranaYazdir(int sayi)
+    {
+        Console.WriteLine(sayi);
+    }
+
+    public void EkranaYazdir(string sayi)
+    {
+        Console.WriteLine(sayi);
+    }
+}

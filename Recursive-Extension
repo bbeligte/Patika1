@@ -1,0 +1,33 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Funcs funcs = new();
+
+        int n = 3;
+
+        Console.WriteLine(funcs.Exponential(2,3));
+
+        n.IntRepeat();
+    }
+}
+
+public class Funcs
+{
+    public int Exponential(int n, int e)
+    {
+        if(e < 2)
+            return n;
+        return Exponential(n, e-1) * n;
+    }
+
+}
+
+public static class Extension
+{
+    public static void IntRepeat(this int x)
+    {
+        Console.WriteLine(x);
+        Console.WriteLine(x);
+    }
+}

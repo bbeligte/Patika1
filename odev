@@ -1,0 +1,132 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        //1
+
+        int n;
+        List<int> l = new List<int>();
+               
+        try
+        {
+            Console.WriteLine("Lütfen bir sayı giriniz: ");
+            n = int.Parse(Console.ReadLine());
+
+            string exp = n<=0 ? "Lütfen 0'dan büyük bir sayı giriniz" : "Lütfen " + n + " adet sayı giriniz:";
+
+            Console.WriteLine(exp);
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(i+1 + ". sayı");
+                l.Add(int.Parse(Console.ReadLine()));         
+            }
+
+            Console.WriteLine("Girdiğiniz çift sayılar: ");
+            foreach (var nmb in l)
+            {
+                if(nmb%2 == 0)
+                {
+                    Console.WriteLine(nmb + " ");
+                }
+            }    
+        }
+        catch (FormatException ex)
+        {
+            Console.WriteLine("Lütfen yalnızca sayılarla işlem yapınız.");
+        }
+
+        catch(ArgumentNullException ex)
+        {
+            Console.WriteLine("Girmiş olduğunuz sayı çok büyük.");
+        }
+
+        catch(Exception ex)
+        {
+            Console.WriteLine("Kendimi iyi hissetmiyorum: " + ex.Message.ToString());
+        }
+
+        finally
+        {
+            Console.WriteLine("Program çıkışı.");
+        }
+
+        //2
+
+        int x;
+        int y;
+
+        List<int> xn = new List<int>();
+
+        Console.WriteLine("Lütfen x sayısını giriniz: ");
+        x = int.Parse(Console.ReadLine());
+        Console.WriteLine("Lütfen y sayısını giriniz: ");
+        y = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Lütfen " + x + " adet sayı giriniz: ");
+        for (int i = 0; i < x; i++)
+        {
+            Console.WriteLine(i+1 + ". sayı");
+            xn.Add(int.Parse(Console.ReadLine()));
+        }
+        
+        Console.WriteLine(y + "'e eşit ya da tam bölünen sayılar şunlar: ");
+        foreach (var nmb in xn)
+        {
+            if(nmb%y == 0)
+            {
+                Console.Write(nmb + " ");
+            }          
+        }
+
+        //3
+
+        Console.WriteLine("Lütfen bir sayı giriniz: ");
+        int z = int.Parse(Console.ReadLine());
+
+        List<string> kelimeler = new List<string>();
+        
+        Console.WriteLine(z + " adet kelime giriniz.");
+        for (int i = 0; i < z; i++)
+        {            
+            Console.WriteLine(i+1 + ". kelime.");
+
+            kelimeler.Add(Console.ReadLine());
+        }
+        for (int t = 0; t < z; t++)
+        {
+            Console.WriteLine(kelimeler[t]);
+        }
+
+        //4
+
+        byte hs = 0;
+        string uinput;
+
+        Console.WriteLine("Lütfen bir cümle yazınız: ");
+        uinput = Console.ReadLine();
+
+        foreach (char character in uinput)
+        {
+            hs++;
+        }
+        Console.WriteLine("Cümlenizdeki harf sayısı: " + hs);
+        Console.WriteLine("Cümlenizdeki kelime sayısı: " + uinput.GetWordCount());
+    }
+}
+
+public static class Methods
+{
+    public static string GetWordCount(this string prm)
+    {
+        char ws = ' ';
+        byte ks = 1;
+
+        foreach (char i in prm)
+        {
+            if(i == ws)
+                ks++;
+        }
+
+        return ks.ToString();
+    }
+}

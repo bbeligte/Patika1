@@ -1,6 +1,6 @@
   <h1>X'i Yalnız Bırakın</h1>
   
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Her ustanın bir üretim aracı vardır. Marangozun testeresi, şefin bıçağı, elektronikçinin havyası... Araçlarını iyi tanımak, beceriyle kullanabilmek zorundadırlar. Bu kazanımlar ustayı çıraktan ayırır. Elindekini en iyi şekilde işlemeyi bilmek gereklidir ki bu da zaman alır.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Her ustanın bir üretim aracı vardır. Marangozun testeresi, şefin bıçağı, elektronikçinin havyası. Araçlarını iyi tanımak, beceriyle kullanabilmek zorundadırlar. Bu kazanımlar ustayı çıraktan ayırır. Elindekini en iyi şekilde işlemeyi bilmek gereklidir ki bu da zaman alır.
   
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;İnsanlar dünyaya çırak olarak gelirler. Uzun zamandır yaşama işiyle meşgul olanlar bize yol gösterir. Yalpalar, sıkılırız. Fakat işimizi en çok zorlaştıran, elimizdeki hayatın da işlenmesi gerektiğini bilmememizdir. Bunu öğrenmek çoğumuz için vakit alır. Nihayetinde ustalaşmamış bir şekilde işe koyuluruz ve asla memnun olmadığımız bir ürün ortaya çıkararak veda ederiz.
   
